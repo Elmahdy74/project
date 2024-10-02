@@ -1,0 +1,22 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install Prometheus
+      apt:
+        name: prometheus
+        state: present
+
+    - name: Install Grafana
+      apt:
+        name: grafana
+        state: present  
+
+    - name: Start Prometheus service
+      service:
+        name: prometheus
+        state: started
+    
+    - name: Start Grafana service
+      service:
+        name: grafana-server
+        state: started
