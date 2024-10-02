@@ -28,7 +28,7 @@ jobs:
         run: terraform apply -auto-approve
       
       - name: Ansible Playbook
-        uses: ansible/ansible-runner@v1.0.0
+        uses: ansible/ansible-runner@c3f3a8a7e8e1d1f0a7b5e04b7c1d1b12e2a0c3e4
         with:
           playbook: playbook.yml
      
